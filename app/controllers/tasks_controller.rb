@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.page(params[:page]).per(4)
   end
 
   # GET /tasks/1
@@ -57,7 +57,7 @@ class TasksController < ApplicationController
     @task.destroy
     respond_to do |format|
       format.html { redirect_to tasks_url }
-      # format.json { head :no_content }
+      # format.json { head :no_cont ent }
     end
   end
 
