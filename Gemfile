@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem "kaminari", "~> 0.14.1"
+gem "dragonfly", "~> 0.9.15"
+gem 'rack-cache', :require => 'rack/cache'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
